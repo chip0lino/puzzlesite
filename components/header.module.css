@@ -1,0 +1,162 @@
+/* HERO как фон всей секции */
+.hero {
+  height: 880px;
+  width: 100%;
+  background: linear-gradient(to bottom, #1D74EE, #3F96E7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 80px; /* отступ для хедера */
+  position: relative;
+}
+
+/* HEADER с отступом снизу и шириной 600px */
+.header {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  padding: 0.8rem 1.3rem;
+  z-index: 999;
+
+  /* Чтобы nav был flex с отступом между меню и кнопкой */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between; /* меню слева, кнопка справа */
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-grow: 1; /* занимает все место кроме кнопки */
+}
+
+.auth-button {
+  background-color: #1D74EE; /* насыщенный синий */
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 0.8rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.auth-button:hover {
+  background-color: #145ac8; /* чуть темнее при ховере */
+}
+
+
+.nav-item {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1D1D1D;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  transition: background 0.3s, color 0.3s;
+  position: relative; /* для псевдоэлементов и underline */
+
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  background: #f0f0f0;
+}
+
+.nav-item.active {
+  color: #1D74EE;
+}
+
+/* Синяя полоска под активным пунктом меню */
+.nav-underline {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 4px;
+  background-color: #1D74EE;
+  border-radius: 12px;
+}
+
+/* Стили для аватара игрока */
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 10%;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.user-avatar:hover {
+  transform: scale(1.1);
+}
+
+.minecraft-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.discord-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9);
+}
+
+.discord-avatar:hover {
+  filter: brightness(1.1);
+}
+
+/* Стили для истекшего доступа */
+.user-avatar.expired {
+  position: relative;
+  border-color: #ff6b35;
+}
+
+.user-avatar.expired .minecraft-avatar {
+  filter: grayscale(0.3) brightness(0.8);
+}
+
+.expired-indicator {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background: #ff6b35;
+  color: white;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  border: 2px solid white;
+}
+
+.auth-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

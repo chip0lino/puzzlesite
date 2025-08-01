@@ -1,0 +1,254 @@
+/* link-minecraft.module.css */
+
+.linkPage {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #1D74EE, #3F96E7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 20px 40px;
+}
+
+.linkContainer {
+  background: #1a1a1a;
+  color: white;
+  border-radius: 16px;
+  max-width: 520px;
+  width: 100%;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.linkHeader {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.minecraftIcon {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.linkHeader h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0 0 16px 0;
+  color: white;
+}
+
+.linkHeader p {
+  font-size: 16px;
+  color: #b3b3b3;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.userInfoCard {
+  background: #2a2a2a;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 32px;
+}
+
+.discordInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.discordAvatarLarge {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 3px solid #5865F2;
+}
+
+.discordInfo h3 {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.discordInfo p {
+  margin: 0;
+  font-size: 14px;
+  color: #00d4aa;
+}
+
+.minecraftForm {
+  margin-bottom: 32px;
+}
+
+.formGroup {
+  margin-bottom: 24px;
+}
+
+.formGroup label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: white;
+  font-size: 16px;
+}
+
+.minecraftInput {
+  width: 100%;
+  padding: 16px 20px;
+  background: #2a2a2a;
+  border: 2px solid #404040;
+  border-radius: 12px;
+  color: white;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.minecraftInput:focus {
+  outline: none;
+  border-color: #00d4aa;
+  box-shadow: 0 0 0 3px rgba(0, 212, 170, 0.1);
+}
+
+.minecraftInput:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.inputHint {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #888;
+  line-height: 1.4;
+}
+
+.errorMessage {
+  background: #ff4444;
+  color: white;
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.continueBtn {
+  width: 100%;
+  background: #00d4aa;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.continueBtn:hover:not(:disabled) {
+  background: #00b896;
+  transform: translateY(-2px);
+}
+
+.continueBtn:disabled {
+  background: #666;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.helpSection {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.helpBtn,
+.noLicenseBtn {
+  background: none;
+  border: none;
+  color: #00d4aa;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: underline;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+}
+
+.helpBtn:hover,
+.noLicenseBtn:hover {
+  color: #00b896;
+}
+
+.legalText {
+  font-size: 14px;
+  color: #999;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.legalText a {
+  color: #00d4aa;
+  text-decoration: none;
+}
+
+.legalText a:hover {
+  text-decoration: underline;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: white;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-left: 4px solid #00d4aa;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loadingContainer p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Адаптивность */
+@media (max-width: 640px) {
+  .linkContainer {
+    padding: 32px 24px;
+    margin: 20px;
+  }
+
+  .linkHeader h1 {
+    font-size: 24px;
+  }
+
+  .minecraftIcon {
+    font-size: 48px;
+  }
+
+  .helpSection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .discordInfo {
+    flex-direction: column;
+    text-align: center;
+  }
+}

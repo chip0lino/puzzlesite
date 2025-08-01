@@ -1,0 +1,138 @@
+.teamPage {
+  background-color: #ffffff;
+  color: #111827;
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.teamLayout {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.teamLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 600px; /* или нужная ширина */
+  width: 100%;
+  margin-bottom: 40px; /* чтобы отделить от правой колонки */
+}
+
+.bannerAndName {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.banner {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  background-color: #e5e7eb;
+}
+
+.nameMeta {
+  flex: 1;
+}
+
+.teamName {
+  font-size: 40px;
+  margin: 0 0 8px;
+  color: #111827;
+}
+
+.teamDesc {
+  font-size: 20px;
+  color: #374151;
+  margin: 0 0 8px;
+}
+
+.teamFullDesc {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #374151;
+  background-color: #f9fafb;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+
+.teamMeta {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Правая часть */
+.teamRight {
+  flex: 1 1 300px;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.membersTitle {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+.searchInput {
+  width: 60%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  margin-bottom: 16px;
+  background-color: #ffffff;
+  color: #111827;
+  font-size: 14px;
+}
+
+.searchInput::placeholder {
+  color: #9ca3af;
+}
+
+.memberList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.member {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  text-decoration: none;
+}
+
+.member img {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+}
+
+.member span {
+  font-size: 15px;
+  color: #111827;
+}
+
+.crownIcon {
+  width: 20px;
+  height: 20px;
+}
+

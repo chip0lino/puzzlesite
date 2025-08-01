@@ -1,0 +1,149 @@
+/* HERO как фон всей секции */
+.hero {
+  height: 880px;
+  width: 100%;
+  background: linear-gradient(to bottom, #1D74EE, #3F96E7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 80px; /* отступ для хедера */
+  position: relative;
+}
+
+/* === MAIN CONTENT IN HERO === */
+.main {
+  max-width: 800px;
+  padding: 0 1rem;
+  margin: 0 auto; /* чтобы центрировать */
+}
+
+/* === TYPOGRAPHY === */
+.title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+/* === BUTTON GROUP === */
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+/* === BUTTONS === */
+.button {
+  background: #ffffff;
+  color: #1D74EE;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  font-weight: 600;
+}
+
+.button-outline {
+  background: transparent;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: color 0.3s ease;
+  font-weight: 600;
+}
+
+.button-outline:hover {
+  color: #d1d1d1;
+}
+
+/* === CONTENT BELOW HERO === */
+.content {
+  background: #0f0f0f;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+/* === FOOTER === */
+.footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  font-size: 0.9rem;
+  background: #0f0f0f;
+  text-align: center;
+}
+
+/* === SOCIAL SECTION === */
+.social-section {
+  background: white;
+  color: #222;
+  padding: 3rem 1rem;
+  text-align: left;
+  font-family: 'Manrope', sans-serif;
+}
+
+.social-section h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.place-to {
+  font-weight: 600;
+  font-size: 2rem;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #424242;
+}
+
+/* Обертка фиксированной высоты и с overflow hidden */
+.word-slider-wrapper {
+  display: inline-block;
+  height: 2.3rem; /* высота текста, примерно */
+  overflow: hidden;
+  vertical-align: bottom;
+  position: relative;
+  width: max-content;
+  bottom: 3px;
+}
+
+/* Слово — анимируется появление снизу вверх */
+.word-slider {
+  display: inline-block;
+  animation: slideUpFadeIn 0.6s ease forwards;
+  white-space: nowrap;
+  position: relative;
+  bottom: -10px;
+  opacity: 0;
+  transition: color 0.5s ease, padding-left 0.5s ease;
+}
+
+@keyframes slideUpFadeIn {
+  0% {
+    bottom: -20px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+
+
+
+
+

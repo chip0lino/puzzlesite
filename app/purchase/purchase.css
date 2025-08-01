@@ -1,0 +1,362 @@
+/* Страница покупки доступа */
+.purchase-page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #1D74EE, #3F96E7);
+  padding: 120px 20px 40px;
+}
+
+.success-banner {
+  background: #28a745;
+  color: white;
+  padding: 16px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.purchase-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.purchase-header {
+  text-align: center;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.purchase-header h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0 0 16px 0;
+}
+
+.purchase-header p {
+  font-size: 18px;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.user-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: white;
+}
+
+.minecraft-head {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.user-info h3 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.user-info p {
+  margin: 0;
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.plan-card {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.plan-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.plan-card.selected {
+  border-color: #1D74EE;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(29, 116, 238, 0.3);
+}
+
+.plan-card.popular {
+  background: linear-gradient(135deg, #1D74EE, #3F96E7);
+  color: white;
+}
+
+.popular-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #FF6B35;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.plan-card h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  color: inherit;
+}
+
+.price-section {
+  margin-bottom: 24px;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.currency {
+  font-size: 24px;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.amount {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.original-price {
+  font-size: 18px;
+  text-decoration: line-through;
+  opacity: 0.6;
+  margin-bottom: 4px;
+}
+
+.duration {
+  font-size: 16px;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  font-size: 16px;
+}
+
+.checkmark {
+  color: #28a745;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.plan-card.popular .checkmark {
+  color: #00d4aa;
+}
+
+.checkout-section {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.order-summary {
+  margin-bottom: 32px;
+}
+
+.order-summary h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  color: #1a1a1a;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.summary-row.total {
+  border-bottom: none;
+  border-top: 2px solid #1D74EE;
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 16px;
+  padding-top: 16px;
+}
+
+.purchase-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #1D74EE, #3F96E7);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 24px;
+}
+
+.purchase-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(29, 116, 238, 0.4);
+}
+
+.purchase-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.logout-btn {
+  width: 100%;
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 24px;
+}
+
+.logout-btn:hover:not(:disabled) {
+  background: #5a6268;
+  transform: translateY(-1px);
+}
+
+.logout-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.payment-methods {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.payment-methods p {
+  margin: 0 0 12px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.payment-icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  font-size: 24px;
+}
+
+.security-note {
+  text-align: center;
+}
+
+.security-note p {
+  margin: 0;
+  color: #888;
+  font-size: 14px;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: white;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-left: 4px solid #00d4aa;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-container p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .purchase-header h1 {
+    font-size: 28px;
+  }
+  
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .checkout-section {
+    margin: 0 16px;
+    padding: 24px;
+  }
+  
+  .user-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .amount {
+    font-size: 36px;
+  }
+}
